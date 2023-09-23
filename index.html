@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="172408391372-cbhhvstakveiq0t0a9t17p2dnd4f2fqs.apps.googleusercontent.com ">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Legal Documentation</title>
+</head>
+<body>
+    <script src="index.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://www.techshenanigans.com/">Tech Shenanigans</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catogeries</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Authors
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Blogs</a>
+                <a class="dropdown-item" href="#">Development</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Business</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      
+      <div class="container">
+          <div class="row">
+              <div style="width: 40%; margin: 25px auto;">
+              <h3 style="text-align: center;">Login Page</h3>
+              <form method="POST" action="">
+                  <div class="form-group">
+                      <label>UserName:</label><input type="text" name="UserName" class="form-control" autofocus placeholder="username">
+                  </div>
+                  <div class="form-group">
+                      <label>Password:</label><input type="Password" name="Password" class="form-control" autofocus placeholder="Password">
+                  </div>
+      
+            <label>Enter Captcha:</label>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" readonly id="capt">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="textinput">
+              </div>
+            </div>
+      
+          <div class="form-group">
+                      <button onclick="validcap()" class="btn btn-lg btn-success btn-block">Submit</button>
+                  </div>
+              </form>
+          <h6>Captcha not visible <img src="refresh.jpg" width="40px" onclick="cap()"></h6>
+          <p>New Here?<a href="">Sign Up</a> </p>
+              <p>Forgotten Password?<a href="">Recover here</a> </p>
+          </div>
+      </div>
+      </div>
+      <h2 class="alert alert-primary">Login In</h2>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="data"> 
+    <p>Name</p>
+    <p id="name" class="alert alert-success"></p>
+    <p>Profile Pic</p>
+    <img id="image" class="rounded-circle" width="100" height="100"/>
+    <p>Email</p>
+    <p id="email"></p>
+    <button type="button" class="btn btn-danger"onclick="signOut();">Sign Out</button>
+    </div>
+
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+</body>
+</html>
